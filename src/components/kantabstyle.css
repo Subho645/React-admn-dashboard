@@ -1,0 +1,74 @@
+/* styles.css */
+
+/* Define CSS variables for light and dark themes */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --hover-color: #e0e0e0;
+    --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  body.dark-mode {
+    --background-color: #333;
+    --text-color: #fff;
+    --hover-color: #444;
+    --box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Common styles for Paper components */
+  .paper-container {
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .paper-container:hover {
+    box-shadow: var(--box-shadow);
+  }
+  
+  /* Kanban specific styles */
+  .kanban-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .kanban-item {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    background-color: var(--hover-color);
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+  }
+  
+  .kanban-item:hover {
+    background-color: var(--hover-color);
+    transform: scale(1.02);
+  }
+  
+  .dragging {
+    background-color: #cfcfcf;
+    transform: rotate(5deg);
+  }
+  
+  /* Table specific styles */
+  .table-container {
+    transition: all 0.3s ease;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .table-container:hover {
+    box-shadow: var(--box-shadow);
+  }
+  

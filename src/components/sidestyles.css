@@ -1,0 +1,36 @@
+/* styles.css */
+.sidebar-list {
+    padding: 0;
+  }
+  
+  .sidebar-item {
+    padding: 20px 16px;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+  }
+  
+  .sidebar-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #1976d2; /* Adjust color to your theme */
+    transform: scaleY(0);
+    transition: transform 0.3s;
+  }
+  
+  .sidebar-item:hover {
+    background-color: rgba(25, 118, 210, 0.1); /* Adjust color to your theme */
+    transform: translateX(4px);
+  }
+  
+  .sidebar-item:hover::before {
+    transform: scaleY(1);
+  }
+  
+  .sidebar-item:hover .MuiListItemText-primary {
+    color: #1976d2; /* Adjust color to your theme */
+  }
+  
